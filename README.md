@@ -6,7 +6,8 @@
 [![Build Status](https://img.shields.io/npm/v/npm.svg)](https://github.com/npm/npm)
 
 ## Technology stack
- [server](https://github.com/q867427795/express/tree/master/server) project is Server-side, and server-stack \/use [expree](http://www.expressjs.com.cn/) framework
+ [server](https://github.com/q867427795/express/tree/master/server) project is Server-side, and server-stack ``` base 
+ use``` [expree](http://www.expressjs.com.cn/) framework
  </br>
  [program](https://github.com/q867427795/express/tree/master/program) project is Client-side
  </br>
