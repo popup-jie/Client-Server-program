@@ -1,6 +1,6 @@
-# express
+# Client-Server-program
 
-> express proxy 本地代理，支持项目模块化
+> Use nuxt、express and mongodb make demo
 
 [![Build Status](https://img.shields.io/myget/mongodb/v/MongoDB.Driver.Core.svg)](https://github.com/mongodb/mongo)
 [![Build Status](https://img.shields.io/npm/v/npm.svg)](https://github.com/npm/npm)
@@ -8,7 +8,7 @@
 ## Technology stack
  [server](https://github.com/q867427795/express/tree/master/server) is server
  </br>
- [expree](http://www.expressjs.com.cn/)framework
+ [expree](http://www.expressjs.com.cn/) framework
  </br>
  [program](https://github.com/q867427795/express/tree/master/program) is client
  </br>
@@ -26,10 +26,4 @@ $ npm install # Or yarn install
 # client port: 3000
 $ node server.js
 
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
 ```
