@@ -6,11 +6,9 @@
 [![Build Status](https://img.shields.io/npm/v/npm.svg)](https://github.com/npm/npm)
 
 ## Technology stack
- [server](https://github.com/q867427795/express/tree/master/server) is Server-side
+ [server](https://github.com/q867427795/express/tree/master/server) project is Server-side, and server-stack \use [expree](http://www.expressjs.com.cn/) framework
  </br>
- [expree](http://www.expressjs.com.cn/) framework
- </br>
- [program](https://github.com/q867427795/express/tree/master/program) is Client-side
+ [program](https://github.com/q867427795/express/tree/master/program) project is Client-side
  </br>
  [nuxt](https://nuxtjs.org/) framework
  </br>
