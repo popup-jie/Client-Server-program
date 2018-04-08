@@ -1,0 +1,30 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "q867427795 <liusw@usoftchina.com>",
+  "private": true,
+  "scripts": {
+    "mn": "node server.js",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "nuxt": "^1.4.0",
+    "axios": "^0.18.0",
+    "http-proxy-middleware": "^0.18.0",
+    "cookiejar": "^2.1.1",
+    "bootstrap": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0"
+  }
+}
