@@ -1,20 +1,20 @@
-# program
+# express
 
 > express proxy 本地代理，支持项目模块化
 
 [![Build Status](https://img.shields.io/myget/mongodb/v/MongoDB.Driver.Core.svg)](https://github.com/mongodb/mongo)
 [![Build Status](https://img.shields.io/npm/v/npm.svg)](https://github.com/npm/npm)
 
-## 技术栈
- [server](https://github.com/q867427795/express/tree/master/server)为项目的服务端
+## Technology stack
+ [server](https://github.com/q867427795/express/tree/master/server)is server
  </br>
- [expree](http://www.expressjs.com.cn/)框架
+ [expree](http://www.expressjs.com.cn/)framework
  </br>
- [program](https://github.com/q867427795/express/tree/master/program)为项目客户端
+ [program](https://github.com/q867427795/express/tree/master/program)is client
  </br>
- [nuxt](https://nuxtjs.org/)框架
+ [nuxt](https://nuxtjs.org/)framework
  </br>
- [mongodb](https://www.mongodb.com/)数据库
+ [mongodb](https://www.mongodb.com/)
  默认端口：27017
  
 ## Build Setup
