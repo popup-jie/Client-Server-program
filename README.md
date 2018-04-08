@@ -6,13 +6,13 @@
 [![Build Status](https://img.shields.io/npm/v/npm.svg)](https://github.com/npm/npm)
 
 ## Technology stack
- [server](https://github.com/q867427795/express/tree/master/server)is server
+ [server](https://github.com/q867427795/express/tree/master/server) is server
  </br>
  [expree](http://www.expressjs.com.cn/)framework
  </br>
- [program](https://github.com/q867427795/express/tree/master/program)is client
+ [program](https://github.com/q867427795/express/tree/master/program) is client
  </br>
- [nuxt](https://nuxtjs.org/)framework
+ [nuxt](https://nuxtjs.org/) framework
  </br>
  [mongodb](https://www.mongodb.com/)
  默认端口：27017
