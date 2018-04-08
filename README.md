@@ -1,6 +1,6 @@
 # Client-Server-program
 
-> Use nuxt、express and mongodb make demo
+> Use nuxt express and mongodb 
 
 [![Build Status](https://img.shields.io/myget/mongodb/v/MongoDB.Driver.Core.svg)](https://github.com/mongodb/mongo)
 [![Build Status](https://img.shields.io/npm/v/npm.svg)](https://github.com/npm/npm)
