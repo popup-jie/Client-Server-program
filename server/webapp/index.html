@@ -10,6 +10,29 @@
 
 <body>
   <div>你看到我就对了</div>
+  <script>
+
+
+    fetch('/api/orderDown', {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: `date=111&id=11&user_id=1&order_id=2`,
+    }).then(res => {
+      fetch('/api/addcomment', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: `content=sss&id=11&user_id=1&pack_score=0.2&quality_score=0.5&order_id=2`,
+      }).then(res => {
+        document.write(res)
+      })
+    })
+  </script>
 </body>
 
 </html>

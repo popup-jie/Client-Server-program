@@ -1,7 +1,8 @@
+var db = require('./mongodb');
 var express = require('express')
 var app = express()
 var bodyParser = require('body-parser')
-const indexRouter = require('./routers/indexRoute');
+const appRouter = require('./routers/index');
 let mongodb = require('./mongodb');
 var fs = require('fs')
 
@@ -34,55 +35,65 @@ app.all('*', function (req, res, next) {
 });
 
 //拦截请求，
-app.use('/getuserlist', (req, res) => {
-  mongodb.findOne({}, data => {
-    res.send(data)
-  })
-})
+// app.use('/getuserlist', (req, res) => {
+//   mongodb.findOne({}, data => {
+//     res.send(data)
+//   })
+// })
 
 //拦截用户相关信息操作
-app.post('/login(/)?*', (req, res) => {
-  let user = req.body.username
-  let pass = req.body.userpass
+// app.post('/login(/)?*', (req, res) => {
+//   let user = req.body.username
+//   let pass = req.body.userpass
 
-  if (!user || !pass) {
-    res.send(errorMsg({ msg: '账号或者密码错误' }))
-    return;
-  }
-  mongodb.findOne('user', { user }).then(data => {
-    if (data.length > 0) {
-      mongodb.findOne('user', { user, pass }).then(data => {
-        if (data.length === 0) {
-          res.send(errorMsg({ msg: '账号或者密码错误' }))
-        } else {
-          res.send(successMsg({ data: data }))
-        }
-      })
-    } else {
-      mongodb.insertOne('user', { user, pass }).then(data => {
-        if (data == 'success') {
-          res.send(successMsg({}))
-        } else {
-          res.send(errorMsg({ msg: '当前服务器繁忙，请稍后再试' }))
-        }
-      })
-    }
-  })
+//   if (!user || !pass) {
+//     res.send(errorMsg({ msg: '账号或者密码错误' }))
+//     return;
+//   }
+//   mongodb.findOne('user', { user }).then(data => {
+//     if (data.length > 0) {
+//       mongodb.findOne('user', { user, pass }).then(data => {
+//         if (data.length === 0) {
+//           res.send(errorMsg({ msg: '账号或者密码错误' }))
+//         } else {
+//           res.send(successMsg({ data: data }))
+//         }
+//       })
+//     } else {
+//       mongodb.insertOne('user', { user, pass }).then(data => {
+//         if (data == 'success') {
+//           res.send(successMsg({}))
+//         } else {
+//           res.send(errorMsg({ msg: '当前服务器繁忙，请稍后再试' }))
+//         }
+//       })
+//     }
+//   })
 
+// })
+
+// app.use('/offer/list', (req, res) => {
+//   res.end();
+// })
+
+// indexRouter.app(app)
+
+app.route('/').get((req, res) => {
+  res.readFile(__dirname + 'webapp/index.html')
 })
 
-app.use('/offer/list', (req, res) => {
-  res.end();
-})
-
+appRouter(app)
 //拦截路由
-app.route('/offer').get((req, res) => {
-  fs.readFile('./webapp/test.html', 'utf-8', function (err, data) {
-    res.writeHead(200, { "Content-Type": "text/html" });
-    res.write(data.toString());
-    res.end();
-  });
-})
+// app.route('/offer').get((req, res) => {
+//   fs.readFile('./webapp/test.html', 'utf-8', function (err, data) {
+//     res.writeHead(200, { "Content-Type": "text/html" });
+//     res.write(data.toString());
+//     res.end();
+//   });
+// })
+
+// var router = require("./routers/indexRoute")
+// app.use('/api', router)
 
 // MongoClient.connect(url, (err, db) => {
 // if (err) throw err;
@@ -139,12 +150,3 @@ var server = app.listen(8700, () => {
 
   console.log('listening at http://%s%s', host, port)
 })
-
-
-// function error(msg = '', code = -1, success = false) {
-//   return {
-//     msg: msg,
-//     code: code,
-//     success: success
-//   }
-// }
